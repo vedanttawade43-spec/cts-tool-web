@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<meta name="description" content="CTS Tool Bot official website">
+<title>CTS Tool Bot | Official Website</title>
+<style>
+:root{--bg:#07111f;--panel:#0d1b2e;--line:#1d3551;--text:#eef6ff;--muted:#a8bbd1;--green:#42f5a1;--blue:#55b8ff;--red:#ff7384}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(ellipse at top,#12365a 0%,var(--bg) 58%);color:var(--text);min-height:100vh}
+.wrap{width:min(100% - 32px,1000px);margin:auto}header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-bottom:1px solid #ffffff16}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.4px}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--green),var(--blue));display:grid;place-items:center;color:#06111d;font-weight:950}
+.pill{border:1px solid #42f5a155;border-radius:999px;padding:7px 11px;color:var(--green);font-size:11px;font-weight:800}
+.hero{text-align:center;padding:60px 0 42px}.eyebrow{color:var(--green);font-size:12px;font-weight:850;letter-spacing:2px}h1{font-size:clamp(38px,8vw,66px);line-height:1.04;margin:14px 0}h1 span{color:var(--green)}
+.hero p,.sub{color:var(--muted);line-height:1.7}.hero p{max-width:640px;margin:0 auto;font-size:17px}.actions{display:flex;justify-content:center;gap:11px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:12px;padding:12px 17px;font-weight:800;border:1px solid var(--line);color:var(--text);background:#10243b;cursor:pointer;font:inherit}.btn.primary{background:var(--green);color:#04131b;border-color:var(--green)}
+section{padding:12px 0 18px;scroll-margin-top:12px}h2{font-size:26px;margin:20px 0 8px}.sub{margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,225px),1fr));gap:15px}.card{background:linear-gradient(145deg,#10233a,#0a1728);border:1px solid var(--line);border-radius:18px;padding:21px;min-height:178px;display:flex;flex-direction:column;align-items:flex-start}
+.ico{font-size:27px}.card h3{margin:12px 0 8px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.65;flex:1}.card a,.card button{display:inline-block;margin-top:15px;color:var(--green);font-weight:800;text-decoration:none;background:none;border:0;padding:0;font:inherit;cursor:pointer}
+.note,.info{border:1px solid #55b8ff44;background:#55b8ff0d;border-radius:14px;padding:16px 18px;color:var(--muted);line-height:1.7;font-size:14px;margin-top:18px}.note strong{color:var(--text)}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:15px}.info{margin:0;background:#0b1a2b;border-color:var(--line)}.info h3{margin:0 0 8px;color:var(--text)}.info p{margin:0}
+.overlay{position:fixed;inset:0;z-index:10;background:#020812df;display:grid;place-items:center;padding:18px}.dialog{width:min(100%,520px);background:var(--panel);border:1px solid #ff738488;border-radius:20px;padding:24px;box-shadow:0 20px 80px #0009}.dialog h2{margin:12px 0}.dialog p{color:var(--muted);line-height:1.7}.hidden{display:none!important}
+footer{margin-top:35px;border-top:1px solid #ffffff16;padding:23px 0 30px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.status{color:var(--green);font-size:13px;min-height:22px}
+@media(max-width:520px){.hero{padding-top:45px}.hero p{font-size:16px}.btn{width:100%}.actions{gap:9px}}
+</style></head>
+<body>
+<header class="wrap"><div class="brand"><div class="logo">CTS</div><span>CTS TOOL BOT</span></div><span class="pill">● OFFICIAL HUB</span></header>
+<main class="wrap">
+<section class="hero"><div class="eyebrow">SIMPLE • USEFUL • MOBILE FRIENDLY</div><h1>Your tools.<br><span>One place.</span></h1><p>Welcome to the CTS Tool Bot website. Find the Telegram bot, useful app resources, and online safety tips from one clean page.</p><div class="actions"><a class="btn primary" href="https://t.me/CtsToolBot" target="_blank" rel="noopener noreferrer">✈ Open Telegram Bot</a><a class="btn" href="#tools">Explore tools ↓</a></div></section>
+<section id="tools"><h2>Available Tools</h2><p class="sub">Choose a card below to open a tool or read more information.</p><div class="grid">
+<article class="card"><div class="ico">📱</div><h3>Free Apps Mods</h3><p>Read the safety notice before choosing to visit ModsManiac.com.</p><button type="button" id="openWarning">ModsManiac.com ↗</button></article>
+<article class="card"><div class="ico">🤖</div><h3>Telegram Bot</h3><p>Open the official CTS Tool Bot in Telegram.</p><a href="https://t.me/CtsToolBot" target="_blank" rel="noopener noreferrer">Open bot ↗</a></article>
+<article class="card"><div class="ico">🌐</div><h3>Website Tool</h3><p>Copy the website link to share it with friends.</p><button type="button" id="copySite">Copy website link ⧉</button><div class="status" id="status" aria-live="polite"></div></article>
+<article class="card"><div class="ico">ℹ️</div><h3>Info Tool</h3><p>Learn what this site is for and how to open the Telegram bot.</p><a href="#info">Read info ↓</a></article></div>
+<div class="note"><strong>Note:</strong> This is a website hub. Telegram bot features depend on the code configured in the bot itself.</div></section>
+<section id="apps"><h2>Free Apps &amp; Safety</h2><p class="sub">Explore free apps from official sources and keep your device protected.</p><div class="grid">
+<article class="card"><div class="ico">🎨</div><h3>Photo &amp; Design Apps</h3><p>Browse free apps from a trusted app store.</p><a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">Google Play Store ↗</a></article>
+<article class="card"><div class="ico">🎬</div><h3>Video Editing Apps</h3><p>Find video editors and check the features available in their free versions.</p><a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">Browse apps ↗</a></article>
+<article class="card"><div class="ico">🛡️</div><h3>APK Safety</h3><p>Unknown modified APKs may contain malware or steal data. Avoid suspicious files and unnecessary permissions.</p><a href="https://support.google.com/googleplay/answer/2812853" target="_blank" rel="noopener noreferrer">Play Protect info ↗</a></article></div></section>
+<section id="info"><h2>About CTS Tool Bot</h2><div class="info-grid"><div class="info"><h3>🎯 What is this site?</h3><p>A simple landing page that collects the Telegram bot link and useful resources in one place.</p></div><div class="info"><h3>🚀 How to start</h3><p>Tap Open Telegram Bot, press Start in Telegram, and follow the bot's own instructions.</p></div></div></section>
+<section id="safety"><h2>Stay Safe Online</h2><div class="info-grid"><div class="info"><h3>🔐 Protect your accounts</h3><p>Never share passwords, OTPs, login codes, or private account details with unknown tools or people.</p></div><div class="info"><h3>✅ Choose trusted sources</h3><p>Use official app stores where possible. Only test tools on accounts and systems you own or have permission to use.</p></div></div></section>
+</main>
+<footer class="wrap"><span>© <span id="year"></span> CTS Tool Bot</span><span>Made for useful links and safer learning.</span></footer>
+<div class="overlay hidden" id="warning" role="dialog" aria-modal="true" aria-labelledby="warningTitle"><div class="dialog"><div class="ico">⚠️</div><h2 id="warningTitle">Modified APK Safety Warning</h2><p>Modified APKs from unofficial websites are not verified by Google Play. They may contain malware, request excessive permissions, or put your accounts and personal data at risk. Never share passwords or OTPs, and don't install a file unless you trust its source.</p><div class="actions"><button class="btn" type="button" id="stay">Stay here</button><a class="btn primary" href="https://modsmaniac.com/" target="_blank" rel="noopener noreferrer">Continue to ModsManiac.com ↗</a></div></div></div>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const warning=document.getElementById('warning');
+document.getElementById('openWarning').addEventListener('click',()=>warning.classList.remove('hidden'));
+document.getElementById('stay').addEventListener('click',()=>warning.classList.add('hidden'));
+warning.addEventListener('click',e=>{if(e.target===warning)warning.classList.add('hidden')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')warning.classList.add('hidden')});
+document.getElementById('copySite').addEventListener('click',async()=>{const status=document.getElementById('status');try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(window.location.href);else{const field=document.createElement('textarea');field.value=window.location.href;field.style.position='fixed';field.style.opacity='0';document.body.appendChild(field);field.select();const ok=document.execCommand('copy');field.remove();if(!ok)throw new Error('copy failed')}status.textContent='Website link copied!'}catch(err){status.textContent='Copy failed. Long-press the address bar to copy the link.'}});
+</script></body></html>
